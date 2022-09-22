@@ -2,7 +2,7 @@
 <?php 
 $host="localhost";
 $user="root";
-$password="Zackcodi@123";
+$password="pass123";
 $db="demo";
 
 $conn=mysqli_connect($host,$user,$password);
@@ -12,7 +12,7 @@ if(isset($_POST['username'])){
     
     $uname=$_POST['username'];
     $password=$_POST['password'];
-    $sql='select * from loginform where user='."\"{$uname}\"".' AND pass='."\"{$password}\"";
+    $sql='select * from login where name='."\"{$uname}\"".' AND password='."\"{$password}\"";
     $result=mysqli_query($conn,$sql);
     
     if(mysqli_num_rows($result)==1){
